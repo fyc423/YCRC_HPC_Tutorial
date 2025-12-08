@@ -6,10 +6,10 @@ You can also use the web portal to
 - Check active jobs under `Jobs`
 - Check your user portal summary under `Utilities`
 
-![WebProtal](https://github.com/fyc423/YCRCClusterSetupTutorial/blob/main/ood_welcome.png?raw=true)
+![WebProtal](https://github.com/fyc423/YCRCClusterSetupTutorial/blob/main/assests/ood_welcome.png?raw=true)
 
 # Interactive Apps
-The HPC Open OnDemand portal provides several interactive apps, popluarly used ones including:
+The HPC Open OnDemand portal provides several interactive apps, popularly used ones including:
 - **Remote Desktop**
 - **RStudio**
 - **Jupyter / JupyterLab**
@@ -22,7 +22,7 @@ Below is an explanation of each launch option using Remote Desktop as an example
 - `Number of hours`: Sets the maximum wall time for the interactive session. Once this time is reached, the job will end automatically. For `gpu_devel` partitions, the maximum number of hours is 6.
 - `Number of CPU cores per node`: Requests the number of CPU cores available to your session. If your job can run on multiple nodes (in a distributed fashion), you could adjust this number accordingly.
 - `Memory per CPU core (GiB)`: Specifies how much RAM is allocated per CPU core. Total memory = (number of cores × memory per core). Increase this for large datasets or memory-intensive tasks. This is helpful for jobs that require parallel processing or multi-threading.
-- `Partition`: Selects which queue or node type to run on (e.g., `devel`, `general`, or `gpu`). Using GPUs requires selecting a GPU partition.For the development phase, select `gpu_devel`
+- `Partition`: Selects which queue or node type to run on (e.g., `devel`, `general`, or `gpu`). Using GPUs requires selecting a GPU partition. For the development phase, select `gpu_devel`
 
 ### Optional
 - `Reservation`: Used only when running jobs during a scheduled reservation (such as a class or workshop). Leave blank unless instructed otherwise.
@@ -30,9 +30,9 @@ Below is an explanation of each launch option using Remote Desktop as an example
 - `Slurm account`: Specifies which allocation or research group is charged for compute usage. Leave blank unless you belong to multiple accounts. 
 - `Additional job options`: Allows adding advanced Slurm flags (one per line), such as GPU constraints or hardware requirements.
 
-![PortalSetupl](https://github.com/fyc423/YCRCClusterSetupTutorial/blob/main/PortalSetup.JPG?raw=true)
+![PortalSetupl](https://github.com/fyc423/YCRCClusterSetupTutorial/blob/main/assests/PortalSetup.JPG?raw=true)
 
-This is equivalent to submitting an interactive job on commend line:
+This is equivalent to submitting an interactive job on the command line:
 ```
 salloc --partition=gpu_devel --time=6:00:00 --nodes=1 --cpus-per-task=8 --mem-per-cpu=1g
 ```
