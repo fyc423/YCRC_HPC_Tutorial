@@ -22,7 +22,7 @@ Write a .sh script that specifies the resources required and commands to run.
 module load miniconda 
 
 # Activate your Conda environment 
-conda activate monai
+conda activate my_env
 
 # Run your program or script
 python my_script.py --arg1 value1 --arg2 value2
