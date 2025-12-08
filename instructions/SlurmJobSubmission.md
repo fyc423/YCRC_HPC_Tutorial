@@ -29,6 +29,12 @@ python my_script.py --arg1 value1 --arg2 value2
 ```
 You can upload the submission script directly to the desired folder via the web portal or using `scp` or `rsync`.
 
+Navigate to the location of .sh file and run the .sh script via
+
+```
+sbatch my_slurm.sh
+```
+
 ## Check Job Progress
 To check your job status, you can access `Active Jobs` on the web portal. 
 Or create an alias that shows job queue information for the user identified by NetID. 
