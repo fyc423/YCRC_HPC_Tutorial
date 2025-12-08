@@ -3,11 +3,11 @@ This is an internal tutorial for setting up your project account for YCRC comput
 
 ## Table of Contents
 
-1. [Getting Started](GettingStarted.md)
-2. [Create Environment](CreateEnvironment.md)
-3. [Interactive Web Portal](InteractiveWebPortal.md)
-4. [Data Transfer](DataTransfer.md)
-5. [Slurm Job Submission](SlurmJobSubmission.md)
+1. [Getting Started](instructions/GettingStarted.md)
+2. [Create Environment](instructions/CreateEnvironment.md)
+3. [Interactive Web Portal](instructions/InteractiveWebPortal.md)
+4. [Data Transfer](instructions/DataTransfer.md)
+5. [Slurm Job Submission](instructions/SlurmJobSubmission.md)
 
 
 
