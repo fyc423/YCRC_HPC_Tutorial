@@ -59,7 +59,7 @@ Or follow in real-time if the job is still running:
 tail -f logs/%x_%j.out    # Follow output
 tail -f logs/%x_%j.err   # Follow error
 ```
-Or you can access the output and error files via the web portal.
+Or you can access the output and error files via the web portal or interactive apps such as Jupyter and Code Server.
 
 You may also check the job resource usage with the following command:
 ```
