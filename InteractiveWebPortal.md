@@ -1,4 +1,4 @@
-## Interactive Sessions
+# Interactive Sessions
 You can use the [Web Portal (Open OnDemand)](https://docs.ycrc.yale.edu/clusters-at-yale/access/ood/), and create an interactive session for the specific cluster you are using. This can be used during the development phase of your code for testing and troubleshooting. 
 
 You can also use the web portal to 
@@ -67,4 +67,3 @@ salloc --partition=gpu_devel --time=6:00:00 --nodes=1 --cpus-per-task=8 --mem-pe
 - `scavenge`: Low-priority CPU jobs using idle nodes; may be preempted.
 
 - `scavenge_gpu`: Low-priority GPU jobs using idle GPU nodes; may be preempted.
-
