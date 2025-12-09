@@ -18,6 +18,9 @@ Write a .sh script that specifies the resources required and commands to run.
 #SBATCH --output=logs/%x_%j.out         # Standard output file (%x for job name, %j for job ID)
 #SBATCH --error=logs/%x_%j.err          # Standard error file
 
+# Navigate to the directory containing my_script.py
+cd /my_path/
+
 # Load necessary modules or software
 module load miniconda 
 
