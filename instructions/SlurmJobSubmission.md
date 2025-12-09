@@ -9,11 +9,11 @@ Write a .sh script that specifies the resources required and commands to run.
 
 #SBATCH --partition=gpu                 # Partition (queue) name, usually gpu
 #SBATCH --nodes=1                       # Number of nodes
-#SBATCH --ntasks=1                      # Number of tasks (usually 1 for GPU jobs)
-#SBATCH --cpus-per-task=4               # Number of CPU cores per task
-#SBATCH --mem-per-cpu=1G                # Memory per CPU core
+#SBATCH --ntasks=1                      # Number of tasks (request more than 1 only for distributed parallel training/computing)
+#SBATCH --cpus-per-task=4               # Number of CPU cores per task (moderate ML training generally requires 4-8 CPU cores)
+#SBATCH --mem-per-cpu=1G                # Memory per CPU core (moderate ML training generally requires 4-8 GB per CPU)
 #SBATCH --time=2-00:00:00               # Total run time (HH:MM:SS) For GPU, maximum time will be 2-00:00:00   
-#SBATCH --gres=gpu:1                    # Number of GPU (request more than one only for distributed parallel training/computing)
+#SBATCH --gres=gpu:1                    # Number of GPU (request more than 1 only for distributed parallel training/computing)
 
 #SBATCH --output=logs/%x_%j.out         # Standard output file (%x for job name, %j for job ID)
 #SBATCH --error=logs/%x_%j.err          # Standard error file
