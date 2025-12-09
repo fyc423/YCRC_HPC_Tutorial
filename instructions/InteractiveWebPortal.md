@@ -46,9 +46,21 @@ salloc --partition=gpu_devel --time=6:00:00 --nodes=1 --cpus-per-task=8 --mem-pe
 
 - `mem-per-cpu`: Memory per CPU core in GiB
 
+#### Note: When launching the **Code Server** app in the HPC web portal, you must provide a **working directory**.  
+You can either:
+
+- enter the path to a specific directory (e.g., your project folder), **or**
+- go to the *Files* tab in the portal and copy the path to your **system project space**.
+
+Your system project space typically looks like:
+
+```
+/<filesystem>/<group>/project/<USERNAME>
+```
+
 ## Partitions Briefly Explained
 
-- `day`: Short CPU jobs (up to a day). Good for routine workloads.  Default if you don't specify one with --partition
+- `day`: Short CPU jobs (up to a day). Good for routine workloads.  Default if you don't specify one with `--partition`.
 
 - `devel`: Short, fast-queue CPU jobs for testing, debugging, or quick Jupyter sessions.
 
@@ -62,7 +74,7 @@ salloc --partition=gpu_devel --time=6:00:00 --nodes=1 --cpus-per-task=8 --mem-pe
 
 - `bigmem`: High-memory CPU nodes for large datasets or memory-intensive tasks.
 
-- `mpi`: Multi-node distributed compute jobs using MPI. Not for Jupyter or interactive apps.
+- `mpi`: Multi-node distributed compute jobs using MPI, not for Jupyter or interactive apps.
 
 - `scavenge`: Low-priority CPU jobs using idle nodes; may be preempted.
 
