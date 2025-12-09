@@ -84,5 +84,13 @@ sinfo -e -o "%.6D|%T|%C|%G|%b" | column -ts "|" | grep -v ',pi' | grep GPU_ID
 ```
 You can then replace GPU_ID with the name of the GPU that you want to use, e.g., a5000/rtx5000. This will return you with the availability of the indicated GPU.
 
-
+- `-o "%.6D|%T|%C|%G|%b"` – formats output to include:
+  - Node Count (`%D`)
+  - Node State (`%T`)
+  - CPU Usage (`%C`: allocated/idle/other/total)
+  - GPU Resources (`%G`: type and count, e.g., `gpu:h200:8`)
+  - Node Features (`%b`, such as CPU generation or GPU model)
+- `column -ts "|" ` – aligns columns for readability.
+- `grep -v ',pi'` – removes nodes tagged with internal or special-purpose designations.
+- `grep GPU_ID` – filters output to only list GPU nodes.
 
