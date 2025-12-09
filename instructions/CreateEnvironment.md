@@ -38,7 +38,7 @@ cd /<filesystem>/<group>/project/<USERNAME>
 ```
 Then make the project folder
 ```
-mkdir -p ~/project
+mkdir project
 ```
 Then create a new Conda environment in the specified prefix. Replace `<project_name>` with your desired name for the project:
 ```
