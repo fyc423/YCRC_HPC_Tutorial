@@ -27,7 +27,16 @@ Create a new Conda environment. Replace `myenv` with your desired environment na
 ```
 conda create --name myenv numpy pandas
 ```
-To create an environment for your specific project. First create your project folder:
+To create an environment for your specific project. First navigate to your system project space and then create your project folder. 
+To access system project path go to the *Files* tab in the portal and copy the path to your **system project space** which typically looks like:
+```
+/<filesystem>/<group>/project/<USERNAME>
+```
+Navigate to the system project sapce via 
+```
+cd /<filesystem>/<group>/project/<USERNAME>
+```
+Then make the project folder
 ```
 mkdir -p ~/project
 ```
@@ -35,6 +44,18 @@ Then create a new Conda environment in the specified prefix. Replace `<project_n
 ```
 conda create --prefix ~/project/conda_envs/project_namev numpy pandas
 ```
+
+#### Note: 
+- project folder (`/<filesystem>/<group>/project/<USERNAME>`or similar):  
+  Long-term, high-quota storage for code, datasets, Conda environments, Slurm scripts, logs, and results.  
+  Accessible from all compute nodes.  
+  Safe and persistent and files are *not* auto-deleted.
+
+- scratch folder (`/<filesystem>/ysm/scratch/<USERNAME>` or similar):  
+  High-speed temporary storage for large intermediate files, checkpoints, and short-term processing.  
+  **Not** backed up; files may be auto-deleted after a period of inactivity.  
+  Best used for temporary or high-throughput work.
+  
 ## Create Jupyter Notebook
 To use the Jupyter interface, you need to install Jupyter Notebook or Jupyter Lab.
 
@@ -58,7 +79,7 @@ If you have installed or deleted a conda environment, run the following command 
 ```
 ycrc_conda_env.sh update
 ```
-For creating an interactive Jupyter session using WebPortal please refer to [Interactive Web Portal Guildline](https://github.com/fyc423/YCRCClusterSetupTutorial/blob/main/InteractiveWebPortal.md)
+For creating an interactive Jupyter session using WebPortal please refer to [Interactive Web Portal Guildline](https://github.com/fyc423/YCRCClusterSetupTutorial/blob/main/instructions/InteractiveWebPortal.md)
 
 ## Install Monai
 For `monai` user, after creating your `conda` environment, activate the environment then install `monai` in your specified environment:
@@ -70,7 +91,7 @@ Install any additional dependencies as needed.
 
 ## Note for GPU-enabled packages installation
 
-To install GPU-enabled packages such as `pytorch-gpu`, `tensorflow`, you may need to first [request a node in interactive mode with GPU](https://github.com/fyc423/YCRCClusterSetupTutorial/blob/main/InteractiveWebPortal.md) and then install it in the environment with GPU, otherwise, you may encounter an Error about missing CUDA kit.
+To install GPU-enabled packages such as `pytorch-gpu`, `tensorflow`, you may need to first [request a node in interactive mode with GPU](https://github.com/fyc423/YCRCClusterSetupTutorial/blob/main/instructions/InteractiveWebPortal.md) and then install it in the environment with GPU, otherwise, you may encounter an Error about missing CUDA kit.
 
 
 Once you have started an interactive session **on a GPU node** and activated your Conda environment, follow the steps below to install GPU-enabled frameworks such as PyTorch and TensorFlow.
