@@ -19,10 +19,10 @@ The HPC Open OnDemand portal provides several interactive apps, popularly used o
 All of these apps share **similar resource request settings**.  
 Below is an explanation of each launch option using Remote Desktop as an example.
 
-- `Number of hours`: Sets the maximum wall time for the interactive session. Once this time is reached, the job will end automatically. For `gpu_devel` partitions, the maximum number of hours is 6.
-- `Number of CPU cores per node`: Requests the number of CPU cores available to your session. If your job can run on multiple nodes (in a distributed fashion), you could adjust this number accordingly.
-- `Memory per CPU core (GiB)`: Specifies how much RAM is allocated per CPU core. Total memory = (number of cores × memory per core). Increase this for large datasets or memory-intensive tasks. This is helpful for jobs that require parallel processing or multi-threading.
-- `Partition`: Selects which queue or node type to run on (e.g., `devel`, `gpu_devel`, or `gpu`). Using GPUs requires selecting a GPU partition. For the development phase, select `devel`
+- `Number of hours`: Sets the maximum wall time for the interactive session. Once this time is reached, the job will end automatically. 
+- `Number of CPU cores per node`: Requests the number of CPU cores available to your session. For interactive sessions, generally 1 CPU core is sufficient.
+- `Memory per CPU core (GiB)`: Specifies how much RAM is allocated per CPU core. Total memory = (number of cores × memory per core). For interactive sessions, generally 4GiB is sufficient for light data analysis.
+- `Partition`: Selects which queue or node type to run on (e.g., `devel`, `gpu_devel`, or `gpu`). Using GPUs requires selecting a GPU partition. For the code development phase, select `devel`.
 
 ### Optional
 - `Reservation`: Used only when running jobs during a scheduled reservation (such as a class or workshop). Leave blank unless instructed otherwise.
