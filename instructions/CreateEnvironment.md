@@ -42,7 +42,7 @@ mkdir -p ~/project
 ```
 Then create a new Conda environment in the specified prefix. Replace `<project_name>` with your desired name for the project:
 ```
-conda create --prefix ~/project/conda_envs/project_namev numpy pandas
+conda create --prefix ~/project/conda_envs/project_name numpy pandas
 ```
 
 #### Note: 
