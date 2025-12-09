@@ -8,7 +8,7 @@ module avail
 Load the modules you need. For example, you can load a Conda module first:
 
 ```bash
-module load miniconda   # or module load anaconda3
+module load miniconda   
 ```
 
 #### About the `miniconda` Module
