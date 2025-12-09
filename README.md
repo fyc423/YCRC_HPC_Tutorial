@@ -1,5 +1,5 @@
-# Image Processing and Analysis Group HPC Tutorial
-This is an internal beginner's tutorial for setting up your project account for YCRC computing cluster use. This tutorial is tailored to the specific needs of the Image Processing and Analysis Group. For more information or to request specific support please see the [documentation by YCRC](https://docs.ycrc.yale.edu/clusters-at-yale/)
+# IPAG YCRC HPC Tutorial
+This is an internal beginner's tutorial for setting up your project account for Yale Center for Research Computing (YCRC) high-performance computing (HPC) cluster use. This tutorial is tailored to the specific needs of the Image Processing and Analysis Group (IPAG). For more information or to request specific support please see the [documentation by YCRC](https://docs.ycrc.yale.edu/clusters-at-yale/)
 
 ## Table of Contents
 
